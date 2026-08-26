@@ -9,10 +9,13 @@ import android.content.IntentFilter
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.devomoikane.phoneautomations.automations.AutomationEvaluator
 import com.devomoikane.phoneautomations.automations.AutomationSettings
 import com.devomoikane.phoneautomations.automations.PcConnectionDetector
@@ -29,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         val onChecked: (Boolean) -> Unit
     )
 
+    private lateinit var scrollView: ScrollView
     private lateinit var connectionText: TextView
     private lateinit var systemSettingText: TextView
     private lateinit var permissionBanner: View
@@ -46,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        scrollView = findViewById(R.id.scroll_view)
         connectionText = findViewById(R.id.connection_text)
         systemSettingText = findViewById(R.id.system_setting_text)
         permissionBanner = findViewById(R.id.permission_banner)
@@ -56,6 +61,12 @@ class MainActivity : AppCompatActivity() {
         adbCommandText.text = buildAdbGrantCommand()
         adbCommandText.setTextIsSelectable(true)
         copyCommandButton.setOnClickListener { copyAdbCommandToClipboard() }
+
+        ViewCompat.setOnApplyWindowInsetsListener(scrollView) { view, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.setPadding(view.paddingLeft, insets.top, view.paddingRight, insets.bottom)
+            windowInsets
+        }
 
         render()
     }

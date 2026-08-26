@@ -17,4 +17,7 @@
 
     <string name="setting_stay_awake_title">Stay awake on computer connection</string>
     <string name="setting_stay_awake_desc">Keeps the screen on while charging from a computer USB port and turns it off again on regular chargers. Turning this off stops managing the system option.</string>
+
+    <string name="foreground_service_channel_description">Keeps automations running in the background</string>
+    <string name="foreground_service_notification_text">Automations active</string>
 </resources>
