@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Phone Automations</string>
+
+    <string name="settings_title">Automations</string>
+    <string name="status_title">Status</string>
+    <string name="status_connection_computer">Connected to computer</string>
+    <string name="status_connection_charger">Charging, no computer detected</string>
+    <string name="status_connection_battery">Running on battery</string>
+    <string name="system_stay_awake_value">Stay awake while charging: %s</string>
+    <string name="value_on">on</string>
+    <string name="value_off">off</string>
+
+    <string name="permission_banner_title">One-time setup required</string>
+    <string name="permission_banner_body">This automation changes a system setting. Grant the special permission once from your computer with this command:</string>
+    <string name="copy_command">Copy</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+
+    <string name="setting_stay_awake_title">Stay awake on computer connection</string>
+    <string name="setting_stay_awake_desc">Keeps the screen on while charging from a computer USB port and turns it off again on regular chargers. Turning this off stops managing the system option.</string>
 </resources>
