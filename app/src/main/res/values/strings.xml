@@ -18,6 +18,40 @@
     <string name="setting_stay_awake_title">Stay awake on computer connection</string>
     <string name="setting_stay_awake_desc">Keeps the screen on while charging from a computer USB port and turns it off again on regular chargers. Turning this off stops managing the system option.</string>
 
+    <string name="drive_title">Google Drive folder sync</string>
+    <string name="drive_desc">Two-way sync between a folder on this device and a private Google Drive folder. Syncs automatically on a schedule. Requires an internet connection.</string>
+    <string name="drive_status_connected">Connected</string>
+    <string name="drive_status_disconnected">Not connected to Google Drive</string>
+    <string name="drive_connect">Connect account</string>
+    <string name="drive_disconnect">Disconnect</string>
+    <string name="drive_sync_now">Sync now</string>
+    <string name="drive_sync_running">Syncing…</string>
+    <string name="drive_sync_complete">Sync complete</string>
+    <string name="drive_sync_failed">Sync failed</string>
+    <string name="drive_select_folder_hint">Pick a folder on this device to sync</string>
+    <string name="drive_interval_label">Sync every</string>
+    <string name="drive_interval_1m">1 min</string>
+    <string name="drive_interval_15m">15 min</string>
+    <string name="drive_interval_1h">1 hour</string>
+    <string name="drive_interval_4h">4 hours</string>
+    <string name="drive_interval_1d">Daily</string>
+    <string name="drive_choose_folder">Choose folder</string>
+    <string name="drive_no_folder">No folder selected</string>
+    <string name="drive_remote_label">Google Drive destination</string>
+    <string name="drive_choose_remote_folder">Choose Drive folder</string>
+    <string name="drive_remote_no_folder">Not set (auto-created on first sync)</string>
+    <string name="drive_enable_label">Enable scheduled sync</string>
+    <string name="drive_remote_choose_title">Choose Drive folder</string>
+    <string name="drive_remote_none_message">No folders found yet. Create a new destination folder, or pick one after the first sync runs.</string>
+    <string name="drive_create_new_folder">Create new folder</string>
+    <string name="drive_remote_created">Destination folder created</string>
+    <string name="drive_remote_error">Could not create folder</string>
+    <string name="drive_remote_root_label">Google Drive</string>
+    <string name="drive_remote_path_label">Location: %1$s</string>
+    <string name="drive_remote_select_here">Select this folder</string>
+    <string name="drive_remote_up">Up</string>
+    <string name="drive_remote_new_folder_here">New folder here</string>
+
     <string name="foreground_service_channel_description">Keeps automations running in the background</string>
     <string name="foreground_service_notification_text">Automations active</string>
 </resources>

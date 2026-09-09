@@ -7,12 +7,14 @@ import androidx.core.content.ContextCompat
 import com.devomoikane.phoneautomations.automations.AutomationEvaluator
 import com.devomoikane.phoneautomations.automations.PcConnectionDetector
 import com.devomoikane.phoneautomations.automations.UsbStateReceiver
+import com.devomoikane.phoneautomations.drive.DriveSyncScheduler
 
 class PhoneAutomationsApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
         AutomationEvaluator.evaluate(this)
+        DriveSyncScheduler.apply(this)
         registerReceiver(
             UsbStateReceiver(),
             IntentFilter(PcConnectionDetector.ACTION_USB_STATE),
